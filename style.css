@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.sidebar{
+    position:fixed;
+    background-color:#fff; 
+    width: 260px;
+    height: 100vh;
+    box-shadow: 0 0px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.4s ease;
+}
+.head{
+    text-decoration-line: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.200);
+}
+.mohan{
+    color: purple;
+    position: relative;
+    left: 16px;
+}
+.header-bar .nav-items .head{
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px;
+}
+
+.header-bar .nav-items .head img{
+    background-color:rgba(0, 132, 255, 0.877);
+    width: 40px;
+    padding:6px;
+    border-radius: 50%;
+    /* box-shadow:  0 2px 5px 0 rgba(0,0,0,0.3); */
+    transition: 0.4s ease-in-out;
+
+}
+.greater-than-btn{
+    background-color: rgba(218, 213, 238, 0.856);
+    width: 32px;
+    height: 35px;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0px 2px 0px rgba(0,0,0,0.3);
+    transition: 0.6s ease;
+    cursor: pointer;
+
+}
+.greater-than-btn:hover{
+    background-color:rgba(218, 213, 238, 0.830);
+}
+
+
+.search-field{
+    /* background-color:green; */
+    padding: 18px;
+    transition: 0.4s ease;
+    position: relative;
+   
+}
+.search-field input{
+    color: #fff;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: rgb(198, 189, 230);
+    cursor: pointer;
+}
+.search-field-icon{
+    /* background-color: red;; */
+    position: relative;
+    top: 31px;
+    left: 16px;
+    font-size: 16px;
+}
+.dark .search-field-icon{
+    color: #fff;
+}
+
+a{
+    text-decoration-line: none;
+}
+/* main menu starts ! */
+.nav-content{
+    padding: 10px 14px;
+    list-style: none;
+    transition: 0.4s ease;
+
+}
+.nav-content .nav-menu + .nav-menu{
+    margin-top: 5px;
+}
+.nav-content .nav-menu a{
+    color: #000;
+    font-weight:500;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 12px;
+    padding:11px 20px;
+    transition: 0.4s ease;
+}
+.nav-content .nav-menu a:hover{
+    background-color: rgba(0, 17, 255, 0.849);
+    border-radius: 8px;
+    color: #fff;
+
+}
+.nav-menu{
+    padding:0px  3px;
+}
+
+/* dark light menu */
+.bottom{
+    /* background-color: yellowgreen; */
+    position:absolute;
+    bottom: 10px;
+    width:90%;
+    border-top:1px solid rgba(128, 128, 128, 0.200);
+
+}
+.bottom .link{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding:11px 20px;
+    color: #000;
+
+    background-color: rgb(198, 189, 230);
+    border-radius: 8px;
+    
+}
+.bottom:hover{
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+
+.night-img{
+    width: 24px;
+    transform: rotate(-45deg);
+}
+.day-img{
+    display: none;
+}
+.light-dark{
+    color: rgb(56, 54, 54);
+}
+.dark-light{
+    display: none;
+}
+
+.toggle{
+    width: 45px;
+    height: 22px;
+    border-radius:46px;
+    background-color: rgba(220, 236, 243, 0.418);
+    display: flex;
+    align-items: center;
+}
+.inner-toggle{
+    background-color:rgba(255, 255, 255, 0.918);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    /* padding: 5px; */
+    margin-left: 5px;
+    transition: 0.50s ease;
+    cursor: pointer;
+
+}
+/* dark light theme starts */
+.sidebar.dark{
+    background-color: #151a2e;
+    
+}
+.sidebar.dark .head img{
+    background-color: #fff;
+    padding:10px;
+}
+.sidebar.dark .greater-than-btn{
+    background-color: #fff;
+}
+.sidebar.dark .search-field input{
+    background-color: rgba(128, 128, 128, 0.434);
+}
+.sidebar.dark .search-field input::placeholder{
+    color: gray;
+}
+.sidebar.dark .nav-content{
+    margin-top: 5px;
+}
+.sidebar.dark .nav-content a{
+    color: #fff;
+}
+.sidebar.dark .nav-content .nav-menu a:hover{
+    background-color: #fff;
+    color: #151a2e;
+}
+.sidebar.dark .bottom .link{
+    background-color:rgba(128, 128, 128, 0.434);
+}
+.sidebar.dark .inner-toggle{
+    transform: translateX(20px);
+}
+.sidebar.dark .light-dark{
+    color: rgb(207, 203, 203);
+    
+}
+
+.sidebar.dark .night-img{
+    display: none;
+}
+.sidebar.dark .day-img{
+    display: unset;
+}
+
+.sidebar.dark .dark-light{
+    display: unset;
+    /* transition: 0.50s ease-in-out; */
+}
+.sidebar.dark .light-dark{
+    display: none;
+    /* transition: 0.4s ease-in; */
+}
+.sidebar.callapsed .head{
+    border-bottom: none;
+}
+
+
+/* dark light theme finish */
+
+
+
+/* callapsed */
+.sidebar.callapsed{
+    width:90px;
+    transition: 0.4s ease;
+}
+.sidebar.callapsed .head img{
+    transform: translate(-60px,0px);
+}
+.sidebar.callapsed .greater-than-btn{
+    /*transform:translate(-30px,-1px); */  /*-> not working property because of ratote
+    !you have to put all transform property in single line*/
+
+    transform: translate(-10px,48px) rotate(180deg);
+    flex-shrink: 0;
+    width: 40px;
+    transition: 0.5s ease-in-out;
+}
+
+
+.sidebar.callapsed .search-field{
+    transform: translate(0px,-2px);
+     margin-top: 10px;
+}
+.sidebar.callapsed .nav-content{
+    transform: translate(-3px, -8px);
+}
+.sidebar.callapsed .nav-content .nav-menu span{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.sidebar.callapsed .bottom{
+    width: 65%;
+    transform: translate(-2px,250px);
+}
+.sidebar.callapsed .bottom .light-dark{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* search icon add in input field */
+.search-icon{
+    position: absolute;
+    left: 35px;
+    top: 30px;
+    /* color: red;; */
+}
+
+.search-field input{
+    padding: 15px 46px;
+    transition: 0.4s ease-in-out;
+}
+.sidebar.callapsed .search-field input{
+    padding: 13px 25px;
+}
+.sidebar.callapsed .search-field input::placeholder{
+    opacity: 0;
+
+}
+
+.night-img{
+    width: 20px;
+    transform: rotate(353deg);
+   
+    /* color: #fff; */
+}
+.sun-img{
+    width: 20px;
+    /* color: #fff; */
+     display: none;
+}
+.dark .sun-img{
+    display: block;
+}
+.dark .night-img{
+    display: none;
+}
+.dark .inner-toggle{
+    /* display: none; */
+}
+.sidebar.callapsed .light-dark,.dark-light{
+    display: none;
+}
+
+.sidebar.callapsed .toggle{
+    display: none;
+}
+.sidebar.callapsed.dark .dark-light{
+    display: none;
+}
+
